@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+  $('table.display').DataTable();
+
 var config = {
   apiKey: "AIzaSyACrcntm-cwMvlB4usP2rcByHIBWlr7EWs",
   authDomain: "smsalumnihomecoming2020.firebaseapp.com",
@@ -84,7 +86,7 @@ $("#total").html(guests.length);
       alert("Please collect payment of ₱ 250. Click ok when done.");
     }
      
-    database.ref().push(currentGuest);
+    database.ref("/register").push(currentGuest);
 
     alert("Guest was successfully registered! Please provide guest with badge and ticket.");
 
@@ -99,11 +101,12 @@ $("#total").html(guests.length);
       counter: counter
     });
     
-    location.reload();
+    $("#table").css("display", "none");
+    $("#table2").css("display", "");
   }
 
 
-    database.ref().on("child_added", function(childSnapshot) {
+    database.ref("/register").on("child_added", function(childSnapshot) {
     console.log(childSnapshot.val());
   
     // Store everything into a variable.
@@ -123,11 +126,9 @@ $("#total").html(guests.length);
   });
 
   database.ref("/count").on("value", function(snapshot) {
-    console.log(snapshot.val());
 
     counter = snapshot.val().counter;
   
-    // Console Log the value of the clickCounter
     console.log(counter);
 
     $("#registered").text(counter);
