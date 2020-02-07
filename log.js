@@ -97,19 +97,18 @@ $("#total").html(guests.length);
 
     alert("Guest was successfully registered! Please provide guest with badge and ticket.");
 
-    console.log(counter);
+    counter++;
 
     if (counter === guests.length) 
       alert("All guests have been registered!");
-    
-    counter++;
 
     database.ref("/count").set({
       counter: counter
     });
+      
+      $("#table").css("display", "none");
+      $("#table2").css("display", "");
     
-    $("#table").css("display", "none");
-    $("#table2").css("display", "");
   }
 
 
