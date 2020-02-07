@@ -22,6 +22,8 @@ var guests = [ {id: 0, name: "Brian Palac", batch: "1995", party: 1},
 {id: 5, name: "Roland Rivera", batch: "Faculty/Staff", party: 1}, {id: 6, name: "Gloria Bonite", batch: "2000", party: 2}
 ]
 
+var registered = [];
+
 $("#registered").text(counter);
 $("#total").html(guests.length);
 
@@ -57,7 +59,12 @@ $("#total").html(guests.length);
 
   function handleRegister() {
     var currentGuest = $(this).data("id1");
-    RegisterGuest(currentGuest);
+    if (registered.indexOf(currentGuest) < 0) {
+      registered.push(currentGuest);
+      RegisterGuest(currentGuest);
+    }
+    else  
+      alert("Guest has already been registered.");
   }
 
   function switch_table() {
