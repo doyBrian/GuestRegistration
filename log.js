@@ -17,9 +17,21 @@ var initial_value = 0;
 var counter = initial_value;
 
 var guests = [ {id: 0, name: "Brian Palac", batch: "1995", party: 1},
-{id: 1, name: "Nick Caskey", batch: "1996", party: 2}, {id: 2, name: "Amy Li", batch: "1997", party: 1},
-{id: 3, name: "Daria Wu", batch: "1998", party: 1}, {id: 4, name: "Aileen Choi", batch: "1999", party: 1},
-{id: 5, name: "Roland Rivera", batch: "Faculty/Staff", party: 1}, {id: 6, name: "Gloria Bonite", batch: "2000", party: 2}
+{id: 1, name: "Nice Paulate", batch: "1995", party: 1}, {id: 2, name: "Luisita Gangging Maandig", batch: "Faculty/Staff", party: 1},
+{id: 3, name: "Cheryl Uy-Ang", batch: "1995", party: 1}, {id: 4, name: "Erlinda Estrella Reyes", batch: "1995", party: 2},
+{id: 5, name: "Roland Rivera", batch: "Faculty/Staff", party: 1}, {id: 6, name: "Gloria Bonite", batch: "Faculty/Staff", party: 2},
+{id: 7, name: "Shalum Ubaub Lleno", batch: "1995", party: 1}, {id: 8, name: "Susan Grace Garcia", batch: "1995", party: 1},
+{id: 9, name: "Ken Xavier", batch: "1995", party: 1}, {id: 10, name: "Cherryl Sue Abuzo", batch: "1995", party: 2},
+{id: 11, name: "Allene May Alamban-Ansaldo", batch: "2001", party: 1}, {id: 12, name: "Vida Guce", batch: "1995", party: 1},
+{id: 13, name: "Jules Salubre", batch: "1995", party: 1}, {id: 14, name: "Noel Silan", batch: "Faculty/Staff", party: 2},
+{id: 15, name: "Rommel Joseph Quijano", batch: "1995", party: 2}, {id: 16, name: "Kerville Ignatius Balandra", batch: "1995", party: 1},
+{id: 17, name: "Cherry Mae Castrodes", batch: "1995", party: 1}, {id: 18, name: "Carla V. Gonzales", batch: "1995", party: 1},
+{id: 19, name: "Frederick Kho", batch: "1995", party: 1}, {id: 20, name: "Annaliza Quilang", batch: "1995", party: 2},
+{id: 21, name: "Alberto Camaddo", batch: "1995", party: 1}, {id: 22, name: "Aileen Choi Go", batch: "1995", party: 1},
+{id: 23, name: "Napoleon Palo", batch: "1995", party: 1}, {id: 24, name: "Asterie-Tabor Revelo", batch: "1995", party: 1},
+{id: 25, name: "Mayraflor Lingcayo", batch: "1995", party: 1}, {id: 26, name: "Vener Agnes", batch: "1995", party: 1},
+{id: 27, name: "Marilou Costello", batch: "Faculty/Staff", party: 1}, {id: 28, name: "Maggie Costello", batch: "Faculty/Staff", party: 2},
+{id: 29, name: "Alex Gaane", batch: "Faculty/Staff", party: 2}, {id: 30, name: "Valerie Joan Espera-Garcia", batch: "Faculty/Staff", party: 2},
 ]
 
 var registered = [];
