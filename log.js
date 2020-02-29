@@ -15,6 +15,7 @@ var database = firebase.database();
 
 var initial_value = 0;
 var counter = initial_value;
+var total = 0;
 
 var guests = [ {id: 0, name: "Brian Palac", batch: "1995", party: 1},
 {id: 1, name: "Nice Paulate", batch: "1995", party: 1}, {id: 2, name: "Luisita Gangging Maandig", batch: "Faculty/Staff", party: 1},
@@ -32,12 +33,13 @@ var guests = [ {id: 0, name: "Brian Palac", batch: "1995", party: 1},
 {id: 25, name: "Mayraflor Lingcayo", batch: "1995", party: 1}, {id: 26, name: "Vener Agnes", batch: "1995", party: 1},
 {id: 27, name: "Marilou Costello", batch: "Faculty/Staff", party: 1}, {id: 28, name: "Maggie Costello", batch: "Faculty/Staff", party: 2},
 {id: 29, name: "Alex Gaane", batch: "Faculty/Staff", party: 2}, {id: 30, name: "Valerie Joan Espera-Garcia", batch: "Faculty/Staff", party: 2},
+{id: 31, name: "Jed Jaranilla", batch: "1997", party: 1}, {id: 32, name: "Marie Antonette Emata", batch: "1997", party: 1},
+{id: 33, name: "Arturo Ubaub Jr.", batch: "1997", party: 1}, {id: 34, name: "Venus Imelie Y. Tagub", batch: "1997", party: 1},
+{id: 35, name: "Honey Roa", batch: "1996", party: 1}, {id: 36, name: "Patrick Jose B. Roa", batch: "1996", party: 1},
+{id: 37, name: "JC Pineda", batch: "1997", party: 1}, {id: 38, name: "Janice Kate Igana", batch: "1994", party: 1},
 ]
 
 var registered = [];
-
-$("#registered").text(counter);
-$("#total").html(guests.length);
 
   // logContainer holds all of our guests
   var logContainer = $("#guests");
@@ -57,7 +59,12 @@ $("#total").html(guests.length);
         + "<td>" + guests[i].party + "</td>"
         + "<td><button type='button' class='btn btn-success register' data-id1='" + guests[i].id + "'>Register</button></td>" +
         "</tr>");
+
+        total = total + guests[i].party;
     }
+
+    $("#registered").text(counter);
+    $("#total").html(total);
 
     $('#tableA').DataTable({
       scrollY: 400,
@@ -109,9 +116,9 @@ $("#total").html(guests.length);
 
     alert("Guest was successfully registered! Please provide guest with badge and ticket.");
 
-    counter++;
+    counter = counter + currentGuest.party;
 
-    if (counter === guests.length) 
+    if (counter === total) 
       alert("All guests have been registered!");
 
     database.ref("/count").set({
