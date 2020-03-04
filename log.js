@@ -37,6 +37,9 @@ var guests = [ {id: 0, name: "Brian Palac", batch: "1995", party: 1},
 {id: 33, name: "Arturo Ubaub Jr.", batch: "1997", party: 1}, {id: 34, name: "Venus Imelie Y. Tagub", batch: "1997", party: 1},
 {id: 35, name: "Honey Roa", batch: "1996", party: 1}, {id: 36, name: "Patrick Jose B. Roa", batch: "1996", party: 1},
 {id: 37, name: "JC Pineda", batch: "1997", party: 1}, {id: 38, name: "Janice Kate Igana", batch: "1994", party: 1},
+{id: 39, name: "Liam P. Abcede", batch: "2012", party: 1}, {id: 40, name: "Karen Chavez", batch: "1997", party: 1},
+{id: 41, name: "Maria Teresita Palamine-Ebarle", batch: "1997", party: 1}, {id: 42, name: "Janice Elaine R. Tamayo", batch: "1995", party: 1},
+{id: 43, name: "John Eric Esteba", batch: "1998", party: 1}
 ]
 
 var registered = [];
